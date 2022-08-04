@@ -1,0 +1,233 @@
+@charset "utf-8";
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Bebas+Neue&family=Noto+Sans+KR:wght@100;400;700;900&display=swap');
+
+
+
+* {margin:0; font-family: 'Noto Sans KR', sans-serif; box-sizing: border-box; outline: none;}
+
+
+/*------------------------------------------------*/
+
+#navi {width: 100%; display: flex; height: 50px; justify-content: flex-end; text-align: center; position: fixed; top: 0; left: 0; z-index: 99; background: white;}
+
+#logbox{display: flex; justify-content:flex-end ; align-items: center; width: 20%; margin-right: 3%;}
+#searchline{ border-bottom: 2px solid black !important; border:none; width: 150px; margin-right:5px; display: none; padding-bottom: 3px; padding-left: 3px;}
+#logbox i{margin-right: 20px; cursor: pointer;}
+#logbox h4{margin-right: 15px; cursor: pointer;}
+#logbox img{cursor: pointer; margin-right: 15px;}
+#searchline h4{cursor: pointer;}
+
+#logobox{width: 100%; height:60px; text-align: center; margin-bottom: 30px; position: fixed; top: 50px; left: 0; z-index: 99; background: white;}
+
+
+/*header ------------------------------------*/
+
+#header{width: 100%; height: calc(100vh - 140px); position: relative; margin-top: 140px;}
+
+#navibox{width: 40%; height:calc( 100vh - 50px); background:black; position: relative; position: fixed; top: 50px; left: -40%; z-index: 99;}
+#menu{list-style: none; padding: 0; }
+.main{transform: skewX(-20deg); margin: 30px; }
+.main a{text-decoration: none; color:white; font-size: 3rem; position: relative;}
+.main a::after{position: absolute; top: 50%; left: 0; width: 0; height: 4px; content:''; background:white; transition: .3s;}
+.main a:hover::after{width: 100%;}
+#menubar{position: absolute; top: 0; right: -60px; font-size: 3rem; width: 60px; line-height: 60px; text-align: center; background:black; border:none; color:white; cursor: pointer;}
+
+
+
+#slidebox{width: 100%; height: 100%; overflow: hidden; position: relative; }
+#slideimgbox{ width: 80%; max-width: 1200px; height:80%; position: absolute; top: 0; right: 0;}
+.slide{ position: absolute; display: block; width: 100%;}
+.slide:nth-child(1){background: url(../images2/slide1.jpg) no-repeat center; background-size: cover; width: 100%; height: 100%;}
+.slide:nth-child(2){background: url(../images2/slide2.jpg) no-repeat center; background-size: cover; width: 0; height: 100%; }
+.slide:nth-child(3){background: url(../images2/slide3.jpg) no-repeat center; background-size: cover; width: 0; height: 100%; }
+#captionbox{position: absolute; width:40%; bottom:5%; left:3%; z-index: 4;}
+.cap h2{font-size: 3rem; font-family: 'DM Serif Display', serif; margin: 0;  animation: Lmove 1.5s both;}
+.cap h3{font-size: 1.8rem; margin: 0; font-family: 'DM Serif Display', serif; animation: Lmove 1.5s .3s both}
+.cap p{font-size: 1.2rem; margin: 0; animation: Lmove 1.5s .6s both}
+.cap{display: none;}
+.cap:nth-child(1){display: block;}
+
+@keyframes Lmove {
+    from{transform: translateX(-30%); opacity: 0;}
+    to{transform: translateX(0); opacity: 1;}
+}
+
+
+#view{position: absolute; bottom: 8%; left: 50%; font-size: 1.6rem; border:none; background:none; cursor: pointer; }
+#view:hover{text-decoration: underline;}
+
+
+#slidenumber{position: absolute; bottom:3%; right: 5%; display: flex; width: 23%; height:20%;}
+.slidebt{ font-size: 4rem; border:none; background:none; cursor: pointer; color:#ddd ;position: absolute;}
+.btleft{top: 0; left: 0; }
+.btright{bottom: 0; right: 0;}
+#slideno{ font-size: 3.5rem; color:#ddd; position: absolute; top: 10%; left: 30%;}
+#slideno1{ font-size: 2.2rem; color:#ddd; position: absolute; top: 20%; left: 50%;}
+#slideno2{font-size: 2.2rem; color:#ddd; position: absolute; top: 30%; right: 30%;}
+
+#slideno, #slideno2 h2{ font-family: 'DM Serif Display', serif; }
+
+/*sec1 --------------------------------------------*/
+
+#sec1{width: 100%; height: 100vh; background:;}
+#promobox{display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; height: 100%; padding-top: 140px;}
+#videobox{position: relative; width: 50%; max-width: 900px; height: 500px; display: flex; justify-content: center; align-items: center;}
+#youtube{position: absolute; left: 0; z-index:-2 ; width: 100%; height: 100%;}
+
+#promo2{width: 50%; height: 100%;}
+#swiperbox{ width: 100%; z-index: 9;}
+.swiper{width: 100%; height: 100%;}
+#swiperbottom{position: relative; height: 50%;}
+#swiperbottom h3{font-size: 3rem; position: absolute; top: 30%; left: 50%; transform: translateX(-50%); white-space: nowrap; font-family: 'Bebas Neue', cursive;}
+#buttonbox{position: absolute; top: 50%; left: 50%; transform: translateX(-50%); width: 350px;}
+.viewmore{ font-size: 1.2rem; background:none; width:150px; line-height: 40px; cursor: pointer; margin-right: 5%;}
+.viewmore:nth-child(2) {margin-right: 0;}
+
+
+/*sec2 --------------------------------------------*/
+
+#sec2 {width: 100%; height:100vh ; padding:1%;}
+#sec2top{width: 100%; height: 50%; display: flex; flex-wrap: wrap;}
+#sec2top1{ font-size: 6rem; line-height: 110px; width: 30%; height: 100%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; position: relative;}
+#sec2top1 h2{ font-family: 'Bebas Neue', cursive; position: relative;}
+#sec2top1 h2::after{position: absolute; top:80%; right: 0; content:'sunglasses ->'; font-size:1.5rem; font-family: 'Noto Sans KR', sans-serif; }
+
+#sec2topslide{width: 70%;height: 100%; }
+#sec2top1_2{width: 200%; height: 100%; display: flex; justify-content: center; align-items: center;}
+.bs{width: 23%;}
+.bs img{width:100%; display: block;}
+
+
+
+#sec2bottom{width: 100%; height: 50%; display: flex; flex-wrap: wrap;}
+#sec2bottomslide{width: 70%; height: 100%; } 
+#sec2bottom1{list-style: none; padding: 0; display: flex; justify-content: center; align-items: center; width: 200%; height: 100%;}
+.bsg{width: 23%;}
+.bsg img{width:100%; display: block;}
+#sec2bottom1_2{font-size: 6rem; line-height: 110px; width: 30%; height: 100%; display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; position: relative;}
+#sec2bottom1_2 h2{font-family: 'Bebas Neue', cursive; }
+#sec2bottom1_2 h2::after{position: absolute; top:75%; left: 3%; content:'<-glasses'; font-size:1.5rem; font-family: 'Noto Sans KR', sans-serif; }
+
+
+
+/*sec3 ----------------------------*/
+#sec3{width: 100%; height: 100vh; padding: 0 3%;}
+#sec3 h2{padding-top: 130px;font-size: 3.5rem; font-family: 'Bebas Neue', cursive;}
+
+#stylebox{list-style: none; padding: 0;display: flex; flex-wrap: wrap; padding:15px 0;}
+.style{width: 20%;}
+.style img{width: 100%; display: block; padding: 5px; cursor: pointer;}
+
+
+
+/*footer ------------------------------*/
+#footer{width: 100%; height: 500px; background: #f2f2f2; margin-top: 100px;}
+#topfoot{width: 100%; display: flex; flex-wrap: wrap; padding: 30px 100px; height: 300px;}
+.topfoot1{margin-right:10%;}
+.topfoot1 h4{font-size: 1rem !important;}
+.topfoot1 p{font-size: .9rem; cursor: pointer; color:#777;}
+#bottomfoot{width: 100%; height: 200px; position: relative;}
+#bottomfoot::before{position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 90%; height: 1px; background-color: black; content:'';}
+.bottomfoot1{width: 100%; height: 60%; padding: 3% 20%; font-size: .8rem;}
+.bottomfoot2{width: 100%; height: 40%; display: flex; justify-content: center; align-items: center;}
+
+
+
+
+
+/*modal ----------------------------------*/
+
+#modal{position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,.3); z-index: 99; display: flex; justify-content: center; align-items: center; display: none;}
+#modalcontents{width: 300px; height: 500px; background: white; box-shadow:0 0 5px black; position: relative; text-align: center; font-weight: bold; }
+#modalcontents h2{ margin-top: 20%; font-family: 'Bebas Neue', cursive; font-size: 2rem; text-align: center; margin-bottom: 30px;}
+
+#modalcontents input{width: 90%; padding: 5px; margin-top: 5px; margin-left: 5px; }
+#modalcontents h4{font-weight: 400; text-align: left; margin-left:7%; font-size: .8rem; text-decoration: underline; cursor: pointer;}
+#modallog{display: flex; justify-content: flex-end; margin-right: 5%;}
+#modallog button{background: black; color: white; cursor: pointer; padding: 3px 10px; font-weight: 100px;}
+#fhrmdls{margin-right: 10px;}
+#nonmember{position: absolute; bottom: 5%; left: 5%; width: 90%; background: black; color:white; cursor: pointer;}
+
+#modalclose{position: absolute; top: 10px; right: 5px; border:none; background: none; font-size: 1.3rem; cursor: pointer; }
+
+
+
+
+
+/*반응형(8000px) ----------------------*/
+@media screen and (max-width : 800px) {
+    .main a { font-size: 2rem;}
+    #captionbox{width: 60%;}
+    .cap h2{font-size: 2rem}
+    .cap h3{font-size: 1.5rem;}
+    .cap p{font-size: 1rem;}
+    #view{right: 15%; bottom: 3%;}
+    #slidenumber{width: 30%; right: 0;}
+    
+
+    .swiper{margin: 0; padding: 0 !important;}
+    #swiperbottom h3{font-size: 2rem;}
+    #buttonbox{width:230px;}
+    .viewmore{width: 100px; font-size: 1rem; line-height:30px;}
+    
+    #sec2top1 h2{font-size: 6rem;}
+    #sec2bottom1_2 h2 {font-size: 6rem;}
+    
+}
+
+
+@media screen and (max-width : 450px) {
+    #logobox{display: flex; justify-content: center; align-items: center;}
+    #logobox img{width: 60%;}
+    #navibox{width: 80%; left: -80%}
+    .main a{font-size: 1.6rem;}
+    
+    #slideimgbox{width: 100%; height: 60%;}
+    #captionbox{width: 100%;}
+    #view{right: 0; width: 75%; font-size: 1rem;}
+    #slidenumber{display: none;}
+    
+    #videobox{width: 100%; }
+    #promo2{width: 100%;}
+    #swiperbox{height:40%;}
+    .swiper{;}
+    .swiper-slide{display: flex; justify-content: center; align-items: center;}
+    .swiper-slide img{width: 60% !important;}
+    #swiperbottom{height: 20%; }
+    #buttonbox{top:70%;}
+    
+    #sec2{margin-top: 200px; margin-bottom: 100px; height: 50vh;}
+    #sec2top{height: 50%;}
+    #sec2top1{width: 100%; height: 20%; justify-content: flex-start;}
+    #sec2top1 h2{font-size: 2.8rem; line-height: 40px}
+    #sec2top1 h2::after{font-size: 1rem;}
+    #sec2top1_2{width:280%;}
+    #sec2bottom{height: 50%;}
+    #sec2bottomslide{height: 150%;}
+    #sec2bottom1{width:280%;}
+    #sec2bottom1_2{height: 50%;}
+    #sec2bottom1_2 h2{font-size: 2.8rem; line-height: 40px;}
+    #sec2bottom1_2 h2::after{font-size: 1rem; top:80%}
+    
+    #sec3 h2{padding-top: 0 ; font-size: 2.5rem;}
+    .style{width: 33%;}
+    .style:last-child{display: none;}    
+    
+    
+    #footer{margin-top: 0; height: 300px;}
+    #topfoot{padding: 3%; height: 170px;}
+    .topfoot1{margin-right: 2%}
+    .topfoot1 h4{font-size: .7rem;}
+    .topfoot1 p{font-size: .6rem;}
+    #bottomfoot{height: 120px;}
+    .bottomfoot1{font-size: .4rem; padding: 1% 3%;}
+    .bottomfoot2{justify-content: flex-end; padding-right: 3%}
+}
+
+
+
+
+
+
+
